@@ -2,10 +2,10 @@
 
 ## Introduction
 
-- Process of designing **--** architecture, component, interface **--** meeting end user requirements.
+- Process of designing **-->** architecture, component, interface **-->** meeting end user requirements.
 - Planning and structuring architecture of software system.
 - User requirement **to** technical blueprint.
-- System component **--** data flow **--** interaction between services.
+- System component **-->** data flow **-->** interaction between services.
 
 ## Importance
 
