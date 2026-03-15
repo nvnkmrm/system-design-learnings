@@ -3,8 +3,8 @@
 - [System Design](#system-design)
   - [Introduction](#introduction)
 - [LLD vs HLD](#lld-vs-hld)
-  - [High-Level Design (HLD) – The Big Picture](#high-level-design-hld-the-big-picture)
-  - [Low-Level Design (LLD) – Internal Implementation](#low-level-design-lld-internal-implementation)
+  - [High Level Design](#high-level-design)
+  - [Low Level Design](#low-level-design)
 
 ---
 
@@ -47,7 +47,7 @@ System design is divided into two complementary part
 
 “Complementary” - because the two parts of system design support and complete each other, rather than working independently. Each part covers aspects that the other does not.
 
-## High-Level Design (HLD) – The Big Picture
+## High Level Design
 
 HLD focuses on the overall architecture of the system.
 
@@ -74,7 +74,7 @@ HLD focuses on the overall architecture of the system.
 - What services exist?
 - How do components interact?
 
-## Low-Level Design (LLD) – Internal Implementation
+## Low Level Design
 
 LLD focuses on how each component is implemented internally.
 
