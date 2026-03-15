@@ -3,9 +3,6 @@
 ## Introduction
 
 - Process of designing **-->** architecture, component, interface **-->** meeting end user requirements.
-- Planning and structuring architecture of software system.
-- User requirement **to** technical blueprint.
-- System component **-->** data flow **-->** interaction between services.
 
 ## Importance
 
@@ -20,4 +17,12 @@
 
 ## Introduction
 
--
+### System Design
+
+- Planning and structuring architecture of software system.
+- User requirement **to** technical blueprint.
+- System component **-->** data flow **-->** interaction between services.
+- Well organized and efficient structure that meets intended purpose while considering factors,
+  - Scalability
+  - Maintainability
+  - Performance
