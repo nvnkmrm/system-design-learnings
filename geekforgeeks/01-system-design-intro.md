@@ -14,7 +14,7 @@
   - Maintainability
   - Performance
 
-## Importance
+### Importance
 
 - Build scalable, robust and efficient software application.
 - Help architect solution that handle real world complexity.
@@ -23,18 +23,7 @@
 - **Adaptability** - changing business needs.
 - **Architectural Understanding** - Learning different architecture (microservice and monolithic), for build suitable application.
 
-## System Design in SDLC
+### System Design in SDLC
 
 - Without system design one cannot jump straight to implementation or testing
 - Vital step, serves as backbone for implementation
-
-# LLD vs HLD
-
-System design is divided into two complementary part
-
-- Low Level Design
-- High Level Design
-
-“Complementary” - because the two parts of system design support and complete each other, rather than working independently. Each part covers aspects that the other does not.
-
-## High Level Design
