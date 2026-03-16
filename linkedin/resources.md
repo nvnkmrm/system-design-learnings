@@ -1,0 +1,36 @@
+[LinkedIn Post](https://www.linkedin.com/posts/shauryaprataps_anthropic-the-company-behind-claude-is-activity-7439150982967750656-r-lE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB2B5U4BF8luuPk9FP8HayQrUk1BUvbmezo)
+
+- APIs: https://www.youtube.com/watch?v=XvFmUE-36Kc
+- API Gateways: https://www.youtube.com/watch?v=5r8PWCK8qhA
+- JWTs: https://www.youtube.com/watch?v=7Q17ubqLfaM
+- Webhooks: https://www.youtube.com/watch?v=41NOoEz3Tzc
+- tRPC, gRPC, GraphQL, or REST: when to use what?: youtube.com/watch?si=J1SH4Dr3WuLIz2fW&v=veAb1fSp1Lk&feature=youtu.be
+- Load Balancing: https://www.youtube.com/watch?v=mswjnBHHd1M
+- Proxy vs Reverse Proxy: https://www.youtube.com/watch?v=HrG0MHkSsCA
+- CAP Theorem: https://www.youtube.com/watch?v=8UryASGBiR4
+- Sharding: https://www.youtube.com/watch?v=nDswg13hZ9o 0:30 to 1:23:40)
+- Caching: https://www.youtube.com/watch?v=nDswg13hZ9o to 1:39:08 )
+- Scaling: https://www.youtube.com/watch?v=nDswg13hZ9o to 2:25:15 )
+- Availability: https://www.youtube.com/watch?v=WC7kpQPGPp8
+- Services in System Design: youtube.com/watch?si=IAI3ezHI2NUxfTOi&v=h1eCOfkTxCQ&feature=youtu.be
+- Databases in System Design:https://www.youtube.com/watch?v=bixPfJ2PT4E
+- Data Sharding and Partitioning: https://www.youtube.com/watch?v=wXvljefXyEo
+- Sync Vs Async: https://www.youtube.com/watch?v=ewUw0sUxHI4
+- REST:https://www.youtube.com/watch?v=uFGJVQvR59A
+- Algorithms in Distributed Systems: https://www.youtube.com/playlist?list=PLsdq-3Z1EPT1wfRQo2xrrst2SGremT_qd
+- SQL vs NoSQL: https://www.youtube.com/watch?v=FzlpwoeSrE0
+- ACID Transactions: https://www.youtube.com/watch?v=DtlV5JTnlh4
+- Consistent Hashing: youtube.com/watch?si=\_HHX4-cr1NRHwZH7&v=vccwdhfqIrI&feature=youtu.be
+- CDC: https://www.youtube.com/results?search_query=CDC+Change+Data+Capture+System+Design
+- Caching: https://www.youtube.com/results?search_query=Caching+System+Design
+- Caching Strategies: https://www.youtube.com/results?search_query=Caching+Strategies+System+Design
+- Cache Eviction Policies: https://www.youtube.com/results?search_query=Cache+Eviction+Policies+System+Design
+- CDN: https://www.youtube.com/results?search_query=CDN+System+Design
+- Rate Limiting Algorithms: https://www.youtube.com/watch?v=mQCJJqUfn9Y
+- Message Queues: https://www.youtube.com/watch?v=oVZtzZVe9Dg
+- Bloom Filters: https://www.youtube.com/watch?v=bgzUdBVr5tE
+- Idempotency: https://www.youtube.com/watch?v=m6DtqSb1BDM
+- Concurrency vs Parallelism: https://www.youtube.com/watch?v=RlM9AfWf1WU
+- Long Polling vs WebSockets: https://www.youtube.com/watch?v=ZBM28ZPlin8
+- Stateful vs Stateless Architecture: https://www.youtube.com/watch?v=P8D6P-6KVNM
+- Batch vs Stream Processing: https://www.youtube.com/watch?v=7PjPhgCoT9c
