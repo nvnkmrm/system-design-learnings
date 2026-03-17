@@ -34,14 +34,14 @@ A **database** is a structured collection of data that is stored and managed so 
 
 #### Key Characteristics
 
-| Feature | Detail |
-|---|---|
-| **Data Model** | Tables with rows and columns |
-| **Schema** | Fixed/Predefined (schema-on-write) |
-| **Query Language** | SQL |
-| **Relationships** | Supports JOINs and foreign keys |
+| Feature             | Detail                                              |
+| ------------------- | --------------------------------------------------- |
+| **Data Model**      | Tables with rows and columns                        |
+| **Schema**          | Fixed/Predefined (schema-on-write)                  |
+| **Query Language**  | SQL                                                 |
+| **Relationships**   | Supports JOINs and foreign keys                     |
 | **ACID Compliance** | Yes — Atomicity, Consistency, Isolation, Durability |
-| **Scalability** | Vertical (scale-up) primarily |
+| **Scalability**     | Vertical (scale-up) primarily                       |
 
 #### ACID Properties
 
@@ -52,13 +52,13 @@ A **database** is a structured collection of data that is stored and managed so 
 
 #### Popular SQL Databases
 
-| Database | Best For |
-|---|---|
-| **PostgreSQL** | Complex queries, JSONB support, open-source |
-| **MySQL** | Web applications, read-heavy workloads |
-| **SQLite** | Embedded systems, mobile apps, local storage |
-| **Microsoft SQL Server** | Enterprise applications |
-| **Oracle DB** | Large enterprise, high-transaction systems |
+| Database                 | Best For                                     |
+| ------------------------ | -------------------------------------------- |
+| **PostgreSQL**           | Complex queries, JSONB support, open-source  |
+| **MySQL**                | Web applications, read-heavy workloads       |
+| **SQLite**               | Embedded systems, mobile apps, local storage |
+| **Microsoft SQL Server** | Enterprise applications                      |
+| **Oracle DB**            | Large enterprise, high-transaction systems   |
 
 #### Use Cases
 
@@ -89,24 +89,28 @@ A **database** is a structured collection of data that is stored and managed so 
 #### Types of NoSQL Databases
 
 ##### 1. Document Stores
+
 - Store data as JSON/BSON documents
 - Each document can have a different structure
 - **Examples:** MongoDB, CouchDB, Firestore
 - **Use Case:** User profiles, product catalogs, content management
 
 ##### 2. Key-Value Stores
+
 - Simplest NoSQL model — data stored as key-value pairs
 - Extremely fast reads/writes
 - **Examples:** Redis, DynamoDB, Riak
 - **Use Case:** Session management, caching, shopping carts
 
 ##### 3. Wide-Column Stores
+
 - Stores data in tables but with flexible column definitions per row
 - Optimized for queries over large datasets
 - **Examples:** Apache Cassandra, HBase, Google Bigtable
 - **Use Case:** Time-series data, IoT telemetry, event logging
 
 ##### 4. Graph Databases
+
 - Stores data as nodes and edges representing relationships
 - Optimized for traversing complex relationships
 - **Examples:** Neo4j, Amazon Neptune, ArangoDB
@@ -114,14 +118,14 @@ A **database** is a structured collection of data that is stored and managed so 
 
 #### Key Characteristics
 
-| Feature | Detail |
-|---|---|
-| **Data Model** | Flexible (document, key-value, column, graph) |
-| **Schema** | Dynamic (schema-on-read) |
-| **Query Language** | Database-specific (no universal standard) |
-| **Relationships** | Typically avoided (denormalized data) |
-| **CAP Theorem** | Often trades Consistency for Availability + Partition Tolerance |
-| **Scalability** | Horizontal (scale-out) natively |
+| Feature            | Detail                                                          |
+| ------------------ | --------------------------------------------------------------- |
+| **Data Model**     | Flexible (document, key-value, column, graph)                   |
+| **Schema**         | Dynamic (schema-on-read)                                        |
+| **Query Language** | Database-specific (no universal standard)                       |
+| **Relationships**  | Typically avoided (denormalized data)                           |
+| **CAP Theorem**    | Often trades Consistency for Availability + Partition Tolerance |
+| **Scalability**    | Horizontal (scale-out) natively                                 |
 
 #### BASE Properties (vs ACID in SQL)
 
@@ -153,17 +157,18 @@ A **database** is a structured collection of data that is stored and managed so 
 
 ### SQL vs NoSQL — When to Use What
 
-| Criteria | SQL | NoSQL |
-|---|---|---|
-| **Data structure** | Structured, relational | Unstructured, semi-structured |
-| **Schema flexibility** | Fixed | Flexible |
-| **Transactions** | Strong ACID support | Limited (improving) |
-| **Scalability** | Vertical | Horizontal |
-| **Query complexity** | Complex JOINs and aggregations | Simple lookups or specific patterns |
-| **Consistency** | Strong | Eventual |
-| **Examples** | Banking, ERP, CRM | Social media, IoT, real-time apps |
+| Criteria               | SQL                            | NoSQL                               |
+| ---------------------- | ------------------------------ | ----------------------------------- |
+| **Data structure**     | Structured, relational         | Unstructured, semi-structured       |
+| **Schema flexibility** | Fixed                          | Flexible                            |
+| **Transactions**       | Strong ACID support            | Limited (improving)                 |
+| **Scalability**        | Vertical                       | Horizontal                          |
+| **Query complexity**   | Complex JOINs and aggregations | Simple lookups or specific patterns |
+| **Consistency**        | Strong                         | Eventual                            |
+| **Examples**           | Banking, ERP, CRM              | Social media, IoT, real-time apps   |
 
 > **Rule of Thumb:**
+>
 > - Use **SQL** when data integrity, complex relationships, and transactional safety matter.
 > - Use **NoSQL** when you need scale, speed, and flexibility over strict consistency.
 
@@ -184,13 +189,13 @@ A **database** is a structured collection of data that is stored and managed so 
 
 #### Caching Strategies
 
-| Strategy | Description | Use Case |
-|---|---|---|
-| **Cache-Aside (Lazy Loading)** | App checks cache first; on miss, fetches from DB and populates cache | General purpose reads |
-| **Write-Through** | Data written to cache and DB simultaneously | Strong consistency needed |
-| **Write-Behind (Write-Back)** | Data written to cache first, DB updated asynchronously | High write throughput |
-| **Read-Through** | Cache sits in front of DB; auto-populates on miss | Transparent caching layer |
-| **Refresh-Ahead** | Cache proactively refreshes data before it expires | Predictable access patterns |
+| Strategy                       | Description                                                          | Use Case                    |
+| ------------------------------ | -------------------------------------------------------------------- | --------------------------- |
+| **Cache-Aside (Lazy Loading)** | App checks cache first; on miss, fetches from DB and populates cache | General purpose reads       |
+| **Write-Through**              | Data written to cache and DB simultaneously                          | Strong consistency needed   |
+| **Write-Behind (Write-Back)**  | Data written to cache first, DB updated asynchronously               | High write throughput       |
+| **Read-Through**               | Cache sits in front of DB; auto-populates on miss                    | Transparent caching layer   |
+| **Refresh-Ahead**              | Cache proactively refreshes data before it expires                   | Predictable access patterns |
 
 #### Cache Eviction Policies
 
@@ -207,28 +212,28 @@ A **database** is a structured collection of data that is stored and managed so 
 
 #### Key Characteristics
 
-| Feature | Detail |
-|---|---|
-| **Storage** | In-memory (with optional disk persistence) |
-| **Data Structures** | Strings, Hashes, Lists, Sets, Sorted Sets, Bitmaps, HyperLogLog, Streams, Geospatial |
-| **Persistence** | RDB snapshots and AOF (Append Only File) logs |
-| **Replication** | Master-replica replication |
-| **Clustering** | Redis Cluster for horizontal scaling |
-| **Pub/Sub** | Built-in publish/subscribe messaging |
-| **Atomic Operations** | Yes — single-threaded execution guarantees atomicity |
+| Feature               | Detail                                                                               |
+| --------------------- | ------------------------------------------------------------------------------------ |
+| **Storage**           | In-memory (with optional disk persistence)                                           |
+| **Data Structures**   | Strings, Hashes, Lists, Sets, Sorted Sets, Bitmaps, HyperLogLog, Streams, Geospatial |
+| **Persistence**       | RDB snapshots and AOF (Append Only File) logs                                        |
+| **Replication**       | Master-replica replication                                                           |
+| **Clustering**        | Redis Cluster for horizontal scaling                                                 |
+| **Pub/Sub**           | Built-in publish/subscribe messaging                                                 |
+| **Atomic Operations** | Yes — single-threaded execution guarantees atomicity                                 |
 
 #### Redis Data Structures and Use Cases
 
-| Data Structure | Use Case |
-|---|---|
-| **String** | Simple caching, counters, session tokens |
-| **Hash** | User profiles, product details (field-level updates) |
-| **List** | Message queues, activity feeds, recent items |
-| **Set** | Unique visitors, tags, friend lists |
-| **Sorted Set** | Leaderboards, priority queues, rate limiting |
-| **Stream** | Event sourcing, log aggregation, real-time feeds |
-| **HyperLogLog** | Approximate unique counts (page views, UV) |
-| **Geospatial** | Location-based services, nearby search |
+| Data Structure  | Use Case                                             |
+| --------------- | ---------------------------------------------------- |
+| **String**      | Simple caching, counters, session tokens             |
+| **Hash**        | User profiles, product details (field-level updates) |
+| **List**        | Message queues, activity feeds, recent items         |
+| **Set**         | Unique visitors, tags, friend lists                  |
+| **Sorted Set**  | Leaderboards, priority queues, rate limiting         |
+| **Stream**      | Event sourcing, log aggregation, real-time feeds     |
+| **HyperLogLog** | Approximate unique counts (page views, UV)           |
+| **Geospatial**  | Location-based services, nearby search               |
 
 #### Common Redis Use Cases
 
@@ -270,14 +275,14 @@ A **database** is a structured collection of data that is stored and managed so 
 
 #### Key Characteristics
 
-| Feature | Detail |
-|---|---|
-| **Storage** | In-memory only (no persistence) |
-| **Data Structures** | Only Strings (simple key-value) |
-| **Persistence** | None |
+| Feature             | Detail                                            |
+| ------------------- | ------------------------------------------------- |
+| **Storage**         | In-memory only (no persistence)                   |
+| **Data Structures** | Only Strings (simple key-value)                   |
+| **Persistence**     | None                                              |
 | **Multi-threading** | Yes — uses multiple threads for higher throughput |
-| **Clustering** | Client-side sharding (no built-in cluster) |
-| **Protocol** | Simple text/binary protocol |
+| **Clustering**      | Client-side sharding (no built-in cluster)        |
+| **Protocol**        | Simple text/binary protocol                       |
 
 #### Common Memcached Use Cases
 
@@ -321,12 +326,12 @@ User (India) --> CDN Edge Node (Mumbai) --> Cached Content Served
 
 #### Types of CDN Caching
 
-| Type | Description |
-|---|---|
-| **Static Content CDN** | Caches unchanging assets: images, CSS, JS, fonts, videos |
-| **Dynamic Content CDN** | Optimizes delivery of personalized/API responses |
-| **Streaming CDN** | Optimized for video streaming (HLS, DASH) |
-| **Security CDN** | DDoS protection, WAF, bot mitigation (e.g., Cloudflare) |
+| Type                    | Description                                              |
+| ----------------------- | -------------------------------------------------------- |
+| **Static Content CDN**  | Caches unchanging assets: images, CSS, JS, fonts, videos |
+| **Dynamic Content CDN** | Optimizes delivery of personalized/API responses         |
+| **Streaming CDN**       | Optimized for video streaming (HLS, DASH)                |
+| **Security CDN**        | DDoS protection, WAF, bot mitigation (e.g., Cloudflare)  |
 
 #### What CDNs Cache
 
@@ -338,14 +343,14 @@ User (India) --> CDN Edge Node (Mumbai) --> Cached Content Served
 
 #### Popular CDN Providers
 
-| Provider | Notable For |
-|---|---|
-| **Cloudflare** | Security, DDoS protection, free tier |
-| **AWS CloudFront** | Tight AWS integration |
-| **Akamai** | Enterprise scale, largest CDN |
-| **Fastly** | Low-latency, real-time purging |
-| **Azure CDN** | Microsoft Azure integration |
-| **Google Cloud CDN** | GCP integration, HTTP/2 & QUIC |
+| Provider             | Notable For                          |
+| -------------------- | ------------------------------------ |
+| **Cloudflare**       | Security, DDoS protection, free tier |
+| **AWS CloudFront**   | Tight AWS integration                |
+| **Akamai**           | Enterprise scale, largest CDN        |
+| **Fastly**           | Low-latency, real-time purging       |
+| **Azure CDN**        | Microsoft Azure integration          |
+| **Google Cloud CDN** | GCP integration, HTTP/2 & QUIC       |
 
 #### CDN Use Cases
 
@@ -380,18 +385,19 @@ User (India) --> CDN Edge Node (Mumbai) --> Cached Content Served
 
 ### Redis vs Memcached
 
-| Feature | Redis | Memcached |
-|---|---|---|
-| **Data Structures** | Rich (Strings, Hashes, Lists, Sets, etc.) | Simple key-value (strings only) |
-| **Persistence** | Yes (RDB + AOF) | No |
-| **Replication** | Yes (master-replica) | No |
-| **Clustering** | Yes (Redis Cluster) | Client-side only |
-| **Pub/Sub** | Yes | No |
-| **Threads** | Single-threaded (I/O multiplexed) | Multi-threaded |
-| **Memory efficiency** | Slightly higher overhead | More memory-efficient |
-| **Use case** | Complex caching + messaging + queues | Pure high-throughput caching |
+| Feature               | Redis                                     | Memcached                       |
+| --------------------- | ----------------------------------------- | ------------------------------- |
+| **Data Structures**   | Rich (Strings, Hashes, Lists, Sets, etc.) | Simple key-value (strings only) |
+| **Persistence**       | Yes (RDB + AOF)                           | No                              |
+| **Replication**       | Yes (master-replica)                      | No                              |
+| **Clustering**        | Yes (Redis Cluster)                       | Client-side only                |
+| **Pub/Sub**           | Yes                                       | No                              |
+| **Threads**           | Single-threaded (I/O multiplexed)         | Multi-threaded                  |
+| **Memory efficiency** | Slightly higher overhead                  | More memory-efficient           |
+| **Use case**          | Complex caching + messaging + queues      | Pure high-throughput caching    |
 
 > **Rule of Thumb:**
+>
 > - Use **Redis** when you need persistence, pub/sub, complex data structures, or distributed locks.
 > - Use **Memcached** when you need pure, simple, high-throughput caching with multiple CPU cores.
 
@@ -427,13 +433,13 @@ An **API (Application Programming Interface)** is a defined contract that allows
 
 #### HTTP Methods in REST
 
-| Method | Operation | Idempotent | Safe |
-|---|---|---|---|
-| **GET** | Read/Retrieve | Yes | Yes |
-| **POST** | Create | No | No |
-| **PUT** | Replace/Update (full) | Yes | No |
-| **PATCH** | Partial Update | No | No |
-| **DELETE** | Delete | Yes | No |
+| Method     | Operation             | Idempotent | Safe |
+| ---------- | --------------------- | ---------- | ---- |
+| **GET**    | Read/Retrieve         | Yes        | Yes  |
+| **POST**   | Create                | No         | No   |
+| **PUT**    | Replace/Update (full) | Yes        | No   |
+| **PATCH**  | Partial Update        | No         | No   |
+| **DELETE** | Delete                | Yes        | No   |
 
 #### REST URL Design Best Practices
 
@@ -449,17 +455,17 @@ GET    /api/v1/users/{id}/orders  → Get orders for a user
 
 #### HTTP Status Codes
 
-| Code | Meaning |
-|---|---|
-| `200 OK` | Successful GET, PUT, PATCH |
-| `201 Created` | Successful POST |
-| `204 No Content` | Successful DELETE |
-| `400 Bad Request` | Invalid input |
-| `401 Unauthorized` | Authentication required |
-| `403 Forbidden` | Authenticated but lacks permission |
-| `404 Not Found` | Resource doesn't exist |
-| `429 Too Many Requests` | Rate limit exceeded |
-| `500 Internal Server Error` | Server-side failure |
+| Code                        | Meaning                            |
+| --------------------------- | ---------------------------------- |
+| `200 OK`                    | Successful GET, PUT, PATCH         |
+| `201 Created`               | Successful POST                    |
+| `204 No Content`            | Successful DELETE                  |
+| `400 Bad Request`           | Invalid input                      |
+| `401 Unauthorized`          | Authentication required            |
+| `403 Forbidden`             | Authenticated but lacks permission |
+| `404 Not Found`             | Resource doesn't exist             |
+| `429 Too Many Requests`     | Rate limit exceeded                |
+| `500 Internal Server Error` | Server-side failure                |
 
 #### Strengths of REST
 
@@ -482,13 +488,13 @@ GET    /api/v1/users/{id}/orders  → Get orders for a user
 
 #### Key Concepts
 
-| Concept | Description |
-|---|---|
-| **Query** | Read data (equivalent to GET) |
-| **Mutation** | Write/modify data (equivalent to POST/PUT/DELETE) |
-| **Subscription** | Real-time data via WebSocket |
-| **Schema** | Strongly typed contract defining all types and operations |
-| **Resolver** | Function that fetches data for each field |
+| Concept          | Description                                               |
+| ---------------- | --------------------------------------------------------- |
+| **Query**        | Read data (equivalent to GET)                             |
+| **Mutation**     | Write/modify data (equivalent to POST/PUT/DELETE)         |
+| **Subscription** | Real-time data via WebSocket                              |
+| **Schema**       | Strongly typed contract defining all types and operations |
+| **Resolver**     | Function that fetches data for each field                 |
 
 #### GraphQL Example
 
@@ -542,21 +548,21 @@ query {
 
 #### Key Concepts
 
-| Concept | Description |
-|---|---|
-| **Protobuf** | Binary serialization format — smaller and faster than JSON |
-| **HTTP/2** | Multiplexed, bidirectional streaming, header compression |
+| Concept                | Description                                                |
+| ---------------------- | ---------------------------------------------------------- |
+| **Protobuf**           | Binary serialization format — smaller and faster than JSON |
+| **HTTP/2**             | Multiplexed, bidirectional streaming, header compression   |
 | **Service Definition** | `.proto` file defines services, methods, and message types |
-| **Code Generation** | Stubs auto-generated for multiple languages |
-| **Streaming** | Server-side, client-side, and bidirectional streaming |
+| **Code Generation**    | Stubs auto-generated for multiple languages                |
+| **Streaming**          | Server-side, client-side, and bidirectional streaming      |
 
 #### gRPC Communication Patterns
 
-| Pattern | Description |
-|---|---|
-| **Unary** | Single request, single response (like REST) |
-| **Server Streaming** | Single request, stream of responses |
-| **Client Streaming** | Stream of requests, single response |
+| Pattern                     | Description                                  |
+| --------------------------- | -------------------------------------------- |
+| **Unary**                   | Single request, single response (like REST)  |
+| **Server Streaming**        | Single request, stream of responses          |
+| **Client Streaming**        | Stream of requests, single response          |
 | **Bidirectional Streaming** | Both client and server stream simultaneously |
 
 #### gRPC `.proto` Example
@@ -599,19 +605,20 @@ message UserResponse {
 
 ### REST vs GraphQL vs gRPC
 
-| Feature | REST | GraphQL | gRPC |
-|---|---|---|---|
-| **Protocol** | HTTP/1.1 | HTTP/1.1 | HTTP/2 |
-| **Data Format** | JSON / XML | JSON | Protobuf (binary) |
-| **Schema / Contract** | OpenAPI (optional) | Strongly typed schema | `.proto` file (required) |
-| **Over/Under Fetching** | Possible | Eliminated | N/A (method-based) |
-| **Real-time** | Polling / WebSocket | Subscriptions | Bidirectional streaming |
-| **Performance** | Moderate | Moderate | High |
-| **Browser Support** | Full | Full | Limited (gRPC-Web) |
-| **Best For** | Public APIs, CRUD | Complex queries, mobile | Internal microservices |
-| **Learning Curve** | Low | Medium | High |
+| Feature                 | REST                | GraphQL                 | gRPC                     |
+| ----------------------- | ------------------- | ----------------------- | ------------------------ |
+| **Protocol**            | HTTP/1.1            | HTTP/1.1                | HTTP/2                   |
+| **Data Format**         | JSON / XML          | JSON                    | Protobuf (binary)        |
+| **Schema / Contract**   | OpenAPI (optional)  | Strongly typed schema   | `.proto` file (required) |
+| **Over/Under Fetching** | Possible            | Eliminated              | N/A (method-based)       |
+| **Real-time**           | Polling / WebSocket | Subscriptions           | Bidirectional streaming  |
+| **Performance**         | Moderate            | Moderate                | High                     |
+| **Browser Support**     | Full                | Full                    | Limited (gRPC-Web)       |
+| **Best For**            | Public APIs, CRUD   | Complex queries, mobile | Internal microservices   |
+| **Learning Curve**      | Low                 | Medium                  | High                     |
 
 > **Rule of Thumb:**
+>
 > - Use **REST** for public APIs and standard CRUD operations.
 > - Use **GraphQL** when clients need flexible, nested data queries (mobile apps, dashboards).
 > - Use **gRPC** for high-performance internal microservice-to-microservice communication.
@@ -657,13 +664,13 @@ A typical production system uses all of these components together in a layered a
 
 ### Component Responsibilities Summary
 
-| Component | Role | Example Technology |
-|---|---|---|
-| **SQL Database** | Persistent, structured, transactional data | PostgreSQL, MySQL |
-| **NoSQL Database** | Flexible, scalable, high-volume data | MongoDB, Cassandra, DynamoDB |
-| **Redis** | Fast caching, sessions, queues, pub/sub | Redis |
-| **Memcached** | Simple, high-throughput key-value caching | Memcached |
-| **CDN** | Edge caching of static/media content, DDoS protection | Cloudflare, CloudFront |
-| **REST API** | Public-facing CRUD operations | Express.js, Django REST |
-| **GraphQL** | Flexible data querying for clients | Apollo Server, Hasura |
-| **gRPC** | Fast internal microservice communication | gRPC, Envoy |
+| Component          | Role                                                  | Example Technology           |
+| ------------------ | ----------------------------------------------------- | ---------------------------- |
+| **SQL Database**   | Persistent, structured, transactional data            | PostgreSQL, MySQL            |
+| **NoSQL Database** | Flexible, scalable, high-volume data                  | MongoDB, Cassandra, DynamoDB |
+| **Redis**          | Fast caching, sessions, queues, pub/sub               | Redis                        |
+| **Memcached**      | Simple, high-throughput key-value caching             | Memcached                    |
+| **CDN**            | Edge caching of static/media content, DDoS protection | Cloudflare, CloudFront       |
+| **REST API**       | Public-facing CRUD operations                         | Express.js, Django REST      |
+| **GraphQL**        | Flexible data querying for clients                    | Apollo Server, Hasura        |
+| **gRPC**           | Fast internal microservice communication              | gRPC, Envoy                  |
