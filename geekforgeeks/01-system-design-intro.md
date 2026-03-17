@@ -49,7 +49,16 @@ System design is divided into two complementary part
 
 ## High Level Design
 
-HLD focuses on the overall architecture of the system.
+- HLD focuses on the overall architecture of the system. Big picture view of the system structure, service, data flow.
+- Identifies major modules, services and their interactions.
+- System architecture and high level decisions.
+- **Created by** architect, stakeholders and senior developers.
+
+**HLD answers questions like:**
+
+- How will the system scale?
+- What services exist?
+- How do components interact?
 
 **Examples:**
 
@@ -68,15 +77,18 @@ HLD focuses on the overall architecture of the system.
 - Cache
 - CDN
 
-**HLD answers questions like:**
-
-- How will the system scale?
-- What services exist?
-- How do components interact?
-
 ## Low Level Design
 
-LLD focuses on how each component is implemented internally.
+- LLD focuses on how each component is implemented internally.
+- Gives detailed blue print of how modules, classes and functions should be built.
+- Convert high level design into detailed implementation plans.
+- Created by senior developers.
+
+**LLD answers questions like:**
+
+- What classes will we create?
+- How do objects interact?
+- What design patterns should be used?
 
 **Examples:**
 
@@ -85,9 +97,3 @@ LLD focuses on how each component is implemented internally.
 - Design patterns
 - Method responsibilities
 - Data models
-
-**LLD answers questions like:**
-
-- What classes will we create?
-- How do objects interact?
-- What design patterns should be used?
