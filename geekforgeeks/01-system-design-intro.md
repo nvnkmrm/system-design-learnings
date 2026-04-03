@@ -23,6 +23,7 @@
   - Scalability
   - Maintainability
   - Performance
+- Defines how different components of the system will work together to achieve the desired functionality efficiently.
 
 ### Importance
 
