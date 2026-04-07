@@ -1,0 +1,5 @@
+.env
+# Ignore secrets
+src/*/bin/
+src/*/obj/
+# Migrations are generated — keep gitignore light

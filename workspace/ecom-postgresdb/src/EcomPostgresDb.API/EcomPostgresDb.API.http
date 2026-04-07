@@ -1,0 +1,6 @@
+@EcomPostgresDb.API_HostAddress = http://localhost:5211
+
+GET {{EcomPostgresDb.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
