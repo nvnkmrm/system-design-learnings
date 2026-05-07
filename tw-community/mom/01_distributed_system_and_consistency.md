@@ -207,3 +207,5 @@ Single leader by default (strong consistency). Write concern levels allow turnin
 ## The Shift
 
 Modern systems are moving away from "pure AP" chaos. The trend is toward strong defaults (S3, Spanner) with optional relaxation for specific performance needs.
+
+Ne
