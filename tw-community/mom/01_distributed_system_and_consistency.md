@@ -175,3 +175,35 @@ Distributed streaming platform
 **Key Tech** ISR (In Sync Replicas)
 
 Supports idempotent producers and transactional writes for "exactly-once" stream processing.
+
+### Amazon S3
+
+**Model:** Strong consistency
+**Key Tech** Distributed caching logic
+
+Since 2020, S3 delivers strong read after write consistency for all operations, simplifying app design.
+
+### DynamoDB
+
+**Model:** Tunable (AP/CP)
+**Key Tech** Leaderless Replication
+
+Default to eventual consistency for speed; offers optional strongly consistent read at 2X cost.
+
+### Cassandra
+
+**Model:** Wide column / AP
+**Key Tech** Tunable consistency
+
+Masterless architecture. You configure $R + W > N$ per query to trade latency for consistency.
+
+### MongoDB
+
+**Model:** Document / CP
+**Key Tech** Replica Sets
+
+Single leader by default (strong consistency). Write concern levels allow turning for durability vs speed.
+
+## The Shift
+
+Modern systems are moving away from "pure AP" chaos. The trend is toward strong defaults (S3, Spanner) with optional relaxation for specific performance needs.
