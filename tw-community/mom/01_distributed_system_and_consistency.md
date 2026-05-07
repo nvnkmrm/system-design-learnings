@@ -15,7 +15,7 @@ Passing message rather than sharing memory.
 
 **Netflix**
 
-Microservice architecture + CDN
+- Microservice architecture + CDN
 
 **AWS**
 
@@ -57,9 +57,7 @@ In CAP Theorem, partition tolerance is mandatory.
 ### Strong Consistency (CP System)
 
 - Linearizability
-
 - Operation appears instantaneous and globally ordered in real time. Once write completes, all subsequent reads see it.
-
 - Trade off - System may be unavailable in case of failures.
 
 #### Best For
