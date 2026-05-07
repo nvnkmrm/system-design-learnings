@@ -6,7 +6,7 @@ Passing message rather than sharing memory.
 
 ## Why they matter ?
 
-- Scalability - Horizontal and vertical, adding notes
+- Scalability - Horizontal and vertical
 - Geo Proximity - Lower latency by serving request by nearest server
 - Resilience - No single point of failure
 - Cost Efficiency - No super computer, use commodity hardware
