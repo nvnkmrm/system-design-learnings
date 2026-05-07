@@ -204,8 +204,34 @@ Masterless architecture. You configure $R + W > N$ per query to trade latency fo
 
 Single leader by default (strong consistency). Write concern levels allow turning for durability vs speed.
 
-## The Shift
+### The Shift
 
 Modern systems are moving away from "pure AP" chaos. The trend is toward strong defaults (S3, Spanner) with optional relaxation for specific performance needs.
 
-Ne
+## Key Takeaways
+
+- Consistency is a Product Choice: Align technical guarantees with user expectations, not just database defaults.
+
+- CAP Reality: Partition happen. You must deliberately choose between blocking (CP) or serving stale data (AP)
+
+- Toolbox Approach: Use Raft/Paxos for control planes (config/locks) and eventual consistency for high scale data.
+
+- Resilience Patterns: Implement Idempotency, retries with backoff, and circuit breaker to handle partial failures.
+
+## Decision Checklist
+
+### What are the invariants?
+
+Is double spending fatal (Strong) or just annoying (Eventual) ?
+
+### What is the latency budget?
+
+Can you afford cross region round trips for every write?
+
+### What is the failure model?
+
+How must the system behave when a region goes dark?
+
+### Read vs . Write Ratio?
+
+Heavy reads favor replications/caching (Eventual).
