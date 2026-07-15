@@ -47,7 +47,7 @@ The easiest way to think about them is: **RDS is a traditional database running 
 * **Choose Amazon RDS if:** You need databases other than MySQL or PostgreSQL (like SQL Server or Oracle), your workload is small/predictable, or you want the lowest possible baseline cost for development environments.
 * **Choose Amazon Aurora if:** You are running enterprise-grade MySQL or PostgreSQL workloads, require extreme performance, need high concurrency, want auto-scaling compute (Serverless), or demand the absolute fastest failover times for high availability.
 
-Choosing between AWS RDS (Relational Database Service) and AWS Aurora comes down to one core question: **Do you need a traditional database that is easy to manage, or do you need a modern, cloud-native database designed for massive scale and high availability?**
+---
 
 Because Aurora is actually *part* of the AWS RDS family, the choice is really between **RDS Traditional (RDS MySQL/PostgreSQL)** and **RDS Aurora**.
 
@@ -91,6 +91,7 @@ Here is the breakdown of when to use which.
 * Go with **RDS** if you are building a small-to-medium application, need SQL Server/Oracle, or are on a tight budget where micro-instances are enough.
 * Go with **Aurora** if you are building a large-scale, production-critical application where downtime means losing money, or if you expect rapid, unpredictable growth.
 
+---
 
 For a long time, traditional databases bundled compute (CPU/RAM) and storage (hard drives/SSDs) together on the same machine. If you needed more storage, you had to buy a whole new server, even if your CPU was sitting idle.
 
