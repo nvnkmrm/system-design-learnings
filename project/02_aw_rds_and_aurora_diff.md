@@ -91,4 +91,53 @@ Here is the breakdown of when to use which.
 * Go with **RDS** if you are building a small-to-medium application, need SQL Server/Oracle, or are on a tight budget where micro-instances are enough.
 * Go with **Aurora** if you are building a large-scale, production-critical application where downtime means losing money, or if you expect rapid, unpredictable growth.
 
-Are you migrating an existing database to AWS, or are you architecting a brand-new application from scratch?
+
+For a long time, traditional databases bundled compute (CPU/RAM) and storage (hard drives/SSDs) together on the same machine. If you needed more storage, you had to buy a whole new server, even if your CPU was sitting idle.
+
+Modern database architecture has shifted toward **decoupling compute and storage** because it solves some of the biggest headaches in data management. Here is why we separate them:
+
+---
+
+### 1. Independent Scaling (The Biggest Win)
+
+In most applications, data storage needs and processing needs don't grow at the same rate.
+
+* **Compute-heavy, Storage-light:** Running a complex analytical report on a small, recent dataset requires massive CPU power but very little disk space.
+* **Storage-heavy, Compute-light:** Archiving 10 years of historical logs requires terabytes of storage, but you rarely query it, so it needs almost no CPU.
+
+By separating them, you can scale up your CPUs during peak hours (like Black Friday) without paying for extra storage, and scale them down when the rush is over.
+
+### 2. Cost Efficiency
+
+Storage is cheap; compute is expensive.
+
+* When they are bundled, you have to buy expensive, high-performance database servers just to store passive data.
+* When separated, you can store petabytes of data on ultra-low-cost cloud object storage (like AWS S3 or Google Cloud Storage) and only spin up expensive compute clusters when you actually need to run queries.
+
+### 3. High Availability and Crash Recovery
+
+If a tightly coupled database server crashes, both your compute power and your data go offline at the same time. Recovery means restoring the whole system.
+
+* In a decoupled architecture, if a compute node fails, **your data is completely safe** because it lives in a separate storage layer.
+* The database can instantly spin up a new compute node, point it to the existing storage, and resume working in seconds.
+
+### 4. Concurrency without "Resource Sharing"
+
+Imagine your marketing team is running a massive data science model at the same time your customers are trying to check out on your app. In a traditional DB, they fight for the same CPU, slowing everything down.
+
+With decoupled layers, you can point **multiple separate compute clusters** at the exact same storage layer:
+
+* **Compute Cluster A:** Dedicated to your app users (optimized for fast, simple queries).
+* **Compute Cluster B:** Dedicated to the marketing team (optimized for heavy analytics).
+
+Neither team interferes with the other's performance, even though they are looking at the same data.
+
+---
+
+### The Trade-off: Network Latency
+
+It’s not all magic; separating them introduces one major challenge: **latency**. Because the CPU and the data are on different physical machines, data has to travel over a network to be processed.
+
+Modern databases (like Snowflake, Amazon Redshift, and BigQuery) solve this by using **advanced caching**. They keep frequently used data temporarily on the compute node's fast local SSD, giving you the best of both worlds: the flexibility of separation and the speed of co-location.
+
+Does this make sense for the type of database system you are currently working with or designing?
